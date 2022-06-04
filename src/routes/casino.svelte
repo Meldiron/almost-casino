@@ -71,7 +71,7 @@
 			await AppwriteService.signOut();
 			await goto('/');
 		} catch (err: any) {
-			Alert.warning(err.message);
+			Alert.warning(err.message ? err.message : err);
 		} finally {
 			signingOut = true;
 		}
@@ -108,7 +108,7 @@
 					Alert.error(`You lost ${bet} Almost Dollars.`);
 				}
 			} catch (err: any) {
-				Alert.warning(err.message);
+				Alert.warning(err.message ? err.message : err);
 			} finally {
 				betting = false;
 			}

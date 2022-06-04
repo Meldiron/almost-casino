@@ -1,10 +1,33 @@
-<script>
+<script context="module" lang="ts">
+	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
 	import { Alert } from '$lib/alert';
-
-	import { AppwriteService } from '$lib/appwrite';
+	import { AppwriteService, type Profile } from '$lib/appwrite';
 	import Loading from '$lib/Loading.svelte';
 
+	export async function load(request: any) {
+		// Using SSR auth cookies (from hook.ts)
+		if (request.session.authCookie) {
+			AppwriteService.setSSR(request.session.authCookie);
+		}
+
+		try {
+			// Get Appwrite User + profile (Appwrite Document)
+			const account = await AppwriteService.getAccount();
+			const profile = await AppwriteService.getProfile(account.$id);
+
+			// If signed it, redirect to casino route
+			return {
+				status: 302,
+				redirect: '/casino'
+			};
+		} catch (err: any) {
+			// No worries, we dont need any of that
+		}
+	}
+</script>
+
+<script>
 	let registering = false;
 	async function onRegister() {
 		if (registering) {
@@ -16,8 +39,8 @@
 		try {
 			await AppwriteService.createAccount();
 			await goto('/casino');
-		} catch (err) {
-			Alert.warning(err);
+		} catch (err: any) {
+			Alert.warning(err.message ? err.message : err);
 		} finally {
 			registering = false;
 		}
