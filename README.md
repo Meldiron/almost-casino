@@ -35,6 +35,8 @@ Almost Casino uses multiple frontend and backend technologies with focus of simp
 
 **Backend:**
 
+> 🚨 There is a bug in Vercel adapter! Please rename file from `_appwrite.json` to `appwrite.json` after cloning this repository. 🚨
+
 > You only need to spin-up backend if you man on backend changes. For frontend changes, you can skip this step as project is connected to production backend instance.
 
 1. Install [Appwrite](https://appwrite.io/docs/installation) locally, or on development server
