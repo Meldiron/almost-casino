@@ -1,10 +1,82 @@
-# Almost Casino
+# 🎰 Almost Casino
+
+![Cover](docs/screen-game.png)
+
+![Cover](docs/screen-intro.png)
+
+## 👋 Introduction
+
+Almost Casino is a fake online casino that supports one game - coin flip. The website is mainly useful for developers serving as demo application using Appwrite and Sveite Kit.
+
+Project focuses on multiple aspects:
+
+- Appwrite Backend
+- Secure use of Appwrite
+- Svelte and Svelte Kit
+- SSR using Svelte (and Vercel)
+
+## 🤖 Tech Stack
+
+Almost Casino uses multiple frontend and backend technologies with focus of simplifying the development. Main focus of tech stack in this project is to make development fast and fun, instead of making it scalable and micro-optimized.
+
+- **[Appwrite](https://appwrite.io/)**, a secure backend as a service that provides 90% of necessary backend functionality out of the box
+- [TailwindCSS](https://tailwindcss.com/), a CSS library to rapidly design components using HTML classes
+- [Svelte](https://svelte.dev/), a JS library to build reactive frontend. Alongside this, application uses [TypeScript](https://www.typescriptlang.org/)
+- [Svelte Kit](https://kit.svelte.dev/), a Svelte framework to give proejct proper structure, routing and other cool features
+- [Vercel](https://vercel.com/), a static site hosting with amazing deployment flow using Git
+
+## 💻 Development Setup
+
+**Frontend:**
+
+1. Install dependencies: `npm install`
+2. Spin-up HTTP server: `npm run dev`
+3. Visit [localhost:3000](http://localhost:3000/)
+
+**Backend:**
+
+> You only need to spin-up backend if you man on backend changes. For frontend changes, you can skip this step as project is connected to production backend instance.
+
+1. Install [Appwrite](https://appwrite.io/docs/installation) locally, or on development server
+2. Sign up into your Appwrite instance and create project with both name and ID set to `almostCasino`
+3. Install [Appwrite CLI](https://appwrite.io/docs/command-line) locally, and login: `appwrite login`
+4. Deploy collections: `appwrite deploy collection`
+5. Deploy functions: `appwrite deploy functions`, and configute environment variables in Appwite Web Console
+
+To prepare your changes from your Appwrite instance database to production one:
+
+1. Pull database changes: `appwrite init collection`
+
+To create a new function:
+
+1. Create function: `appwrite init function`
+
+Feel free to do manual changes to [appwrite.json](appwrite.json) if you are familiar with this file.
+
+## 🚀 Deployment
+
+**Frontend:**
+
+1. Install dependencies: `npm install`
+2. Build project: `npm run build`
+3. Deploy folder `build` on a static hosting
+
+> Frontend build does not use any special environment variables.
+
+**Backend:**
+
+1. Deploy database changes, if necessary: `appwrite deploy collection`
+2. Deploy function changes, if necessary: `appwrite deploy function`
+
+---
+
+## 📚 Svelte Kit Resources (Generated)
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
 ## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+If you're seeing this, you've probably already done this step. Congrats!!!
 
 ```bash
 # create a new project in the current directory
