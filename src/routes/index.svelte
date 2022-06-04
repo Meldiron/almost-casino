@@ -27,7 +27,7 @@
 	}
 </script>
 
-<script>
+<script lang="ts">
 	let registering = false;
 	async function onRegister() {
 		if (registering) {
