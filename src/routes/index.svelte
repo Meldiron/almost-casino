@@ -24,6 +24,8 @@
 		} catch (err: any) {
 			// No worries, we dont need any of that
 		}
+
+		return {};
 	}
 </script>
 
