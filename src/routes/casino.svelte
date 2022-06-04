@@ -49,7 +49,7 @@
 
 	// Realtime logic
 	$: {
-		if (profile) {
+		if (profile && browser) {
 			AppwriteService.subscribeProfile(profile.$id, onProfileChange);
 		}
 	}
