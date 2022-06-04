@@ -7,9 +7,7 @@
             "$read": [
                 "role:member"
             ],
-            "$write": [
-                "role:member"
-            ],
+            "$write": [],
             "name": "profiles",
             "enabled": true,
             "permission": "collection",

@@ -27,7 +27,7 @@ module.exports = async function (req, res) {
     throw new Error("Missing environment variables.");
   }
 
-  const userId = req.env['APPWRITE_FUNCTION_PROJECT_ID'];
+  const userId = req.env['APPWRITE_FUNCTION_USER_ID'];
 
   client
     .setEndpoint(req.env['APPWRITE_FUNCTION_ENDPOINT'])
