@@ -5,6 +5,9 @@ export function getSession(event: any) {
     const cookies = cookie.parse(cookieStr || '');
     const authCookie = cookies[`a_session_${import.meta.env.VITE_APPWRITE_PROJECT_ID.toLowerCase()}_legacy`];
 
+    console.log(cookieStr);
+    console.log(authCookie);
+
     return {
         authCookie
     }
