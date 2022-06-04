@@ -155,7 +155,7 @@
 			Head or tails? Place your bet and see if luck is on your side.
 		</p>
 
-		<div class="flex items-center space-x-3 mb-3">
+		<div class="flex items-center mb-3 flex-col space-y-3 md:space-y-0 md:flex-row md:space-x-3">
 			<button
 				on:click={onUpdateBet(-10)}
 				class="border-brand-600 border-2 hover:border-brand-500 hover:text-brand-500 text-brand-600 rounded-none px-8 py-4"

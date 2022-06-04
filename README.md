@@ -15,6 +15,10 @@ Project focuses on multiple aspects:
 - Svelte and Svelte Kit
 - SSR using Svelte (and Vercel)
 
+Proof of server-side rendering kicking in properly with Appwrite and Svelte Kit (hosted on Vercel):
+
+![Cover](docs/screen-ssr.png)
+
 ## 🤖 Tech Stack
 
 Almost Casino uses multiple frontend and backend technologies with focus of simplifying the development. Main focus of tech stack in this project is to make development fast and fun, instead of making it scalable and micro-optimized.
