@@ -76,6 +76,10 @@ Feel free to do manual changes to [appwrite.json](appwrite.json) if you are fami
 
 ---
 
+Assets used in the project made by [Alex Martynov](https://www.figma.com/community/file/1096465749704772913).
+
+---
+
 ## 📚 Svelte Kit Resources (Generated)
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
